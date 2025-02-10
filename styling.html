@@ -16,14 +16,23 @@
         {
           background-color: #FFD54F;
           font-weight: bold;
-          border: 2px solid #FFA000
+          border: 2px solid #FFA000;
+          animation-name: colorchange;
+          animation-duration: 4s;
+
         }
       article p
       {
         line-height: 1.5;
         font-style: italic;
       }
+      
+      @keyframes colorchange {
+        from {background-color: #FFD54F;}
+        to {background-color: #FFB300;}
+      }
     </style>
+    
 </head>
 <body>
   <article>
@@ -34,6 +43,7 @@
   <article class="featured">
     <h2>Featured Article</h2>
     <p>This is a featured article with a bold look and a border.</p>
+    
   </article>
   
 </body>
