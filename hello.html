@@ -21,6 +21,9 @@
         <input id="textBox" type="text"/>
         <div id="output"></div>
 
+        <buttton id="nameButton">Press me</buttton>
+        <div id="greeting"></div>
+
         <script>
             const buttonRef = document.getElementById("button_A");
             const headingRef = document.getElementById("heading_A");
@@ -34,6 +37,15 @@
             const output = document.querySelector("#output");
             textBox.addEventListener("keydown", (event)=> {
             output.textContent = `You pressed "${event.key}".`;
+            });
+
+            const nameButtonRef = document.getElementById("nameButton");
+            const greetingRef = document.getElementById("greeting");
+            nameButtonRef.addEventListener("click", function() {
+            const name = prompt("What is your name?");
+            const nameToAdd = document.createElement("p");
+            nameToAdd.textContent = "Hello! " + name + ", nice to see you!";
+            greetingRef.appendChild(nameToAdd);
             });
             </script>
     </body>
